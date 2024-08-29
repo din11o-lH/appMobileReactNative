@@ -1,11 +1,13 @@
-import { getRouteInfoFromState } from "expo-router/build/LocationProvider";
+// import React from 'react';
+import { View, Text } from 'react-native';
+import { Slot, Stack } from 'expo-router';
 
+const RootLayout = () => {
+  return (
+    <Stack>
+      <Stack.Screen name='index' options={{ headerShown: false}} />
+    </Stack>
+  )
+}
 
-import { NativeWindStyleSheet } from "nativewind";
-
-NativeWindStyleSheet.setOutput({
-  default: "native",
-});
-
-
-getRouteInfoFromState
+export default RootLayout;
